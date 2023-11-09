@@ -1,0 +1,10 @@
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+**/.DS_Store
+target/
+.idea/

